@@ -21,3 +21,4 @@ logger.addHandler(sl)
 while True:
     time.sleep(5)
     logger.info('Something Interesting Happened')
+    print('Something Interesting Happened')
