@@ -6,7 +6,8 @@ logger.setLevel(logging.DEBUG)
 
 syslog_host = get_docker_secret('global_syslog_host', default='localhost')
 syslog_port = get_docker_secret('global_syslog_port', default='514', cast_to=int)
-hostname = get_docker_secret('hostname', default='hostname')
+hostname = get_docker_secret('hostname', default='unknown')
+hostname = 'docker-' + hostname
 
 formatter = logging.Formatter(f'%(asctime)s {hostname}[%(process)d]: %(name)s - %(levelname)s - %(message)s\n')
 formatter.default_time_format='%Y-%m-%dT%H:%M:%SZ'
