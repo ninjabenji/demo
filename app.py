@@ -34,5 +34,5 @@ logger.addHandler(syslog_handler)
 logger.addHandler(file_handler)
 
 while True:
-    time.sleep(5)
+    time.sleep(30)
     logger.info('Something Interesting Happened')
